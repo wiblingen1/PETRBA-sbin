@@ -103,32 +103,32 @@ do
 done
 
 # Generate Host Files
-curl --fail -o ${APRSHOSTS} -s https://raw.githubusercontent.com/FreeDMR-Digital-Network/MW0MWZ-HostFiles/main/APRSHosts.txt
-curl --fail -o ${DCSHOSTS} -s http://www.pistar.uk/downloads/DCS_Hosts.txt --user-agent "Pi-Star_${pistarCurVersion}"
-curl --fail -o ${DMRHOSTS} -s https://raw.githubusercontent.com/FreeDMR-Digital-Network/MW0MWZ-HostFiles/main/DMR_Hosts.txt
+curl --fail -o ${APRSHOSTS} -s http://barrandovhblink.jednoduse.cz/databaze/APRSHosts.txt
+curl --fail -o ${DCSHOSTS} -s http://barrandovhblink.jednoduse.cz/databaze/DCS_Hosts.txt --user-agent "Pi-Star_${pistarCurVersion}"
+curl --fail -o ${DMRHOSTS} -s http://barrandovhblink.jednoduse.cz/databaze/DMR_Hosts.txt
 if [ -f /etc/hostfiles.nodextra ]; then
   # Move XRFs to DPlus Protocol
-  curl --fail -o ${DPlusHOSTS} -s http://www.pistar.uk/downloads/DPlus_WithXRF_Hosts.txt --user-agent "Pi-Star_${pistarCurVersion}"
-  curl --fail -o ${DExtraHOSTS} -s http://www.pistar.uk/downloads/DExtra_NoXRF_Hosts.txt --user-agent "Pi-Star_${pistarCurVersion}"
+  curl --fail -o ${DPlusHOSTS} -s http://barrandovhblink.jednoduse.cz/databaze/DPlus_WithXRF_Hosts.txt --user-agent "Pi-Star_${pistarCurVersion}"
+  curl --fail -o ${DExtraHOSTS} -s http://barrandovhblink.jednoduse.cz/databaze/DExtra_NoXRF_Hosts.txt --user-agent "Pi-Star_${pistarCurVersion}"
 else
   # Normal Operation
-  curl --fail -o ${DPlusHOSTS} -s http://www.pistar.uk/downloads/DPlus_Hosts.txt --user-agent "Pi-Star_${pistarCurVersion}"
-  curl --fail -o ${DExtraHOSTS} -s http://www.pistar.uk/downloads/DExtra_Hosts.txt --user-agent "Pi-Star_${pistarCurVersion}"
+  curl --fail -o ${DPlusHOSTS} -s http://barrandovhblink.jednoduse.cz/databazes/DPlus_Hosts.txt --user-agent "Pi-Star_${pistarCurVersion}"
+  curl --fail -o ${DExtraHOSTS} -s http://barrandovhblink.jednoduse.cz/databaze/DExtra_Hosts.txt --user-agent "Pi-Star_${pistarCurVersion}"
 fi
-curl --fail -o ${DMRIDFILE} -s https://raw.githubusercontent.com/FreeDMR-Digital-Network/MW0MWZ-HostFiles/main/DMRIds.dat
-curl --fail -o ${STRIPPEDCSV} -s https://raw.githubusercontent.com/FreeDMR-Digital-Network/MW0MWZ-HostFiles/main/stripped.csv
-curl --fail -o ${P25HOSTS} -s http://www.pistar.uk/downloads/P25_Hosts.txt --user-agent "Pi-Star_${pistarCurVersion}"
-curl --fail -o ${M17HOSTS} -s http://www.pistar.uk/downloads/M17_Hosts.txt --user-agent "Pi-Star_${pistarCurVersion}"
-curl --fail -o ${YSFHOSTS} -s http://www.pistar.uk/downloads/YSF_Hosts.txt --user-agent "Pi-Star_${pistarCurVersion}"
-curl --fail -o ${FCSHOSTS} -s http://www.pistar.uk/downloads/FCS_Hosts.txt --user-agent "Pi-Star_${pistarCurVersion}"
+curl --fail -o ${DMRIDFILE} -s http://barrandovhblink.jednoduse.cz/databaze/DMRIds.dat
+curl --fail -o ${STRIPPEDCSV} -s http://barrandovhblink.jednoduse.cz/databaze/stripped.csv
+curl --fail -o ${P25HOSTS} -s http://barrandovhblink.jednoduse.cz/databaze/P25_Hosts.txt --user-agent "Pi-Star_${pistarCurVersion}"
+curl --fail -o ${M17HOSTS} -s http://barrandovhblink.jednoduse.cz/databaze/M17_Hosts.txt --user-agent "Pi-Star_${pistarCurVersion}"
+curl --fail -o ${YSFHOSTS} -s http://barrandovhblink.jednoduse.cz/databaze/YSF_Hosts.txt --user-agent "Pi-Star_${pistarCurVersion}"
+curl --fail -o ${FCSHOSTS} -s http://barrandovhblink.jednoduse.cz/databaze/FCS_Hosts.txt --user-agent "Pi-Star_${pistarCurVersion}"
 #curl --fail -s http://www.pistar.uk/downloads/USTrust_Hosts.txt --user-agent "Pi-Star_${pistarCurVersion}" >> ${DExtraHOSTS}
-curl --fail -o ${XLXHOSTS} -s http://www.pistar.uk/downloads/XLXHosts.txt --user-agent "Pi-Star_${pistarCurVersion}"
-curl --fail -o ${NXDNIDFILE} -s http://www.pistar.uk/downloads/NXDN.csv --user-agent "Pi-Star_${pistarCurVersion}"
-curl --fail -o ${NXDNHOSTS} -s http://www.pistar.uk/downloads/NXDN_Hosts.txt --user-agent "Pi-Star_${pistarCurVersion}"
-curl --fail -o ${TGLISTBM} -s https://raw.githubusercontent.com/FreeDMR-Digital-Network/MW0MWZ-HostFiles/main/TGList_BM.txt
-curl --fail -o ${TGLISTP25} -s http://www.pistar.uk/downloads/TGList_P25.txt --user-agent "Pi-Star_${pistarCurVersion}"
-curl --fail -o ${TGLISTNXDN} -s http://www.pistar.uk/downloads/TGList_NXDN.txt --user-agent "Pi-Star_${pistarCurVersion}"
-curl --fail -o ${TGLISTYSF} -s http://www.pistar.uk/downloads/TGList_YSF.txt --user-agent "Pi-Star_${pistarCurVersion}"
+curl --fail -o ${XLXHOSTS} -s http://barrandovhblink.jednoduse.cz/databaze/XLXHosts.txt --user-agent "Pi-Star_${pistarCurVersion}"
+curl --fail -o ${NXDNIDFILE} -s http://barrandovhblink.jednoduse.cz/databaze/NXDN.csv --user-agent "Pi-Star_${pistarCurVersion}"
+curl --fail -o ${NXDNHOSTS} -s http://barrandovhblink.jednoduse.cz/databaze/NXDN_Hosts.txt --user-agent "Pi-Star_${pistarCurVersion}"
+curl --fail -o ${TGLISTBM} -s http://barrandovhblink.jednoduse.cz/databaze/TGList_BM.txt
+curl --fail -o ${TGLISTP25} -s http://barrandovhblink.jednoduse.cz/databaze/TGList_P25.txt --user-agent "Pi-Star_${pistarCurVersion}"
+curl --fail -o ${TGLISTNXDN} -s http://barrandovhblink.jednoduse.cz/databaze/TGList_NXDN.txt --user-agent "Pi-Star_${pistarCurVersion}"
+curl --fail -o ${TGLISTYSF} -s http://barrandovhblink.jednoduse.cz/databaze/TGList_YSF.txt --user-agent "Pi-Star_${pistarCurVersion}"
 
 # If there is a DMR Over-ride file, add it's contents to DMR_Hosts.txt
 if [ -f "/root/DMR_Hosts.txt" ]; then
